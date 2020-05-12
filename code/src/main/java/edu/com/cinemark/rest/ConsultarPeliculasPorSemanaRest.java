@@ -69,7 +69,7 @@ public class ConsultarPeliculasPorSemanaRest extends BaseConsultaSemanaControlle
 		System.out.println("consulta-peliculas-semana : response ===> "+response);
 
 		System.out.println("hola");
-		
+		System.out.println("hola Jhonny");
 		
 		return new ResponseEntity<>(response, HttpStatus.OK);
 		
