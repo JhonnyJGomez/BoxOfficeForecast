@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" updateCheck="true"
+	monitoring="autodetect" dynamicConfig="true">
+
+	<diskStore path="java.io.tmpdir/movistar-total" />
+
+	<cache name="semanas"
+		memoryStoreEvictionPolicy="LFU" 
+		maxEntriesLocalHeap="500"
+		maxEntriesLocalDisk="500"
+		eternal="false" 
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="86400" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	
+	<cache name="forecasts"
+		memoryStoreEvictionPolicy="LFU" 
+		maxEntriesLocalHeap="500"
+		maxEntriesLocalDisk="500"
+		eternal="false" 
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="86400" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	
+</ehcache>
+
