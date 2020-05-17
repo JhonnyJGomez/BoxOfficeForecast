@@ -23,6 +23,8 @@ public class Forecast {
     private Integer estimacion_asistencia;
 	@Column(name = "id_pelicula")
     private Integer id_pelicula;
+	@Column(name = "id_ciudad")
+    private Integer id_ciudad;
 	
 	public Integer getId() {
 		return id;
@@ -53,6 +55,12 @@ public class Forecast {
 	}
 	public void setId_pelicula(Integer id_pelicula) {
 		this.id_pelicula = id_pelicula;
+	}
+	public Integer getId_ciudad() {
+		return id_ciudad;
+	}
+	public void setId_ciudad(Integer id_ciudad) {
+		this.id_ciudad = id_ciudad;
 	}
 	
 	

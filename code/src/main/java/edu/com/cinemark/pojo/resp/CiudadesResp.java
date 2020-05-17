@@ -10,16 +10,17 @@ import lombok.Data;
 @ApiModel(description = "Objeto que hace referencia a la respuesta del api, devolverá el número de semana")
 @Data
 @JsonInclude(Include.NON_NULL)
-@JsonPropertyOrder({"cod_ciudad","nom_ciudad"})
+@JsonPropertyOrder({"id_ciudad","nom_ciudad"})
 public class CiudadesResp {
 
-	private String cod_ciudad;
+	private String id_ciudad;
 	private String nom_ciudad;
-	public String getCod_ciudad() {
-		return cod_ciudad;
+		
+	public String getId_ciudad() {
+		return id_ciudad;
 	}
-	public void setCod_ciudad(String cod_ciudad) {
-		this.cod_ciudad = cod_ciudad;
+	public void setId_ciudad(String id_ciudad) {
+		this.id_ciudad = id_ciudad;
 	}
 	public String getNom_ciudad() {
 		return nom_ciudad;

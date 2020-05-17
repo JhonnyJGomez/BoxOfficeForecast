@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.com.cinemark.common.controller.BaseConsultaSemanaController;
+import edu.com.cinemark.common.util.TotalUtil;
 import edu.com.cinemark.exception.ApiFault;
 import edu.com.cinemark.model.Forecast;
 import edu.com.cinemark.model.Peliculas;
@@ -64,7 +65,7 @@ public class ConsultarPeliculasPorSemanaRest extends BaseConsultaSemanaControlle
 		
 		ConsultarPeliculasPorSemanaResp response = new ConsultarPeliculasPorSemanaResp();
 		
-		response = consultaPeliculaPorSemana.generateResponse(listPeliculas);
+		response = TotalUtil.generateResponse(listPeliculas);
 		
 		System.out.println("consulta-peliculas-semana : response ===> "+response);
 

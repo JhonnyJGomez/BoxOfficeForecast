@@ -13,10 +13,10 @@ import edu.com.cinemark.model.Peliculas;
 @Repository
 public interface PeliculasRepository extends JpaRepository<Peliculas,Serializable>{
 
-	@Cacheable(value = "forecasts", unless = "#result == null or #result.size() == 0")
+	@Cacheable(value = "peliculas", unless = "#result == null or #result.size() == 0")
 	List<Peliculas> findAll();
 	
-	@Cacheable(value = "forecasts", unless = "#result == null or #result.size() == 0")
+	@Cacheable(value = "peliculas", unless = "#result == null or #result.size() == 0")
 	Peliculas findOne(Serializable id);
 	
 }

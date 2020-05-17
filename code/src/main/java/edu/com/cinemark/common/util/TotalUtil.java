@@ -1,18 +1,13 @@
 package edu.com.cinemark.common.util;
 
-import java.lang.reflect.Field;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.LinkedList;
-import java.util.Collections;
 
-import org.apache.commons.collections4.CollectionUtils;
-import org.joda.time.DateTime;
-import org.springframework.beans.factory.annotation.Autowired;
+import edu.com.cinemark.model.Peliculas;
+import edu.com.cinemark.pojo.resp.ConsultarPeliculasPorSemanaResp;
+import edu.com.cinemark.pojo.resp.PeliculaResp;
 
 
 public class TotalUtil {
@@ -37,6 +32,27 @@ public class TotalUtil {
             System.out.println(ex);
         }
         return fechaDate;
+    }
+    
+    public static ConsultarPeliculasPorSemanaResp generateResponse(List<Peliculas> listPeliculas){
+    	ConsultarPeliculasPorSemanaResp response = new ConsultarPeliculasPorSemanaResp();
+    	
+    	for (Peliculas peliculas : listPeliculas) {
+			
+    		PeliculaResp pr = new PeliculaResp();
+    		
+    		pr.setCod_pelicula(peliculas.getCod_pelicula());    		
+    		pr.setTitulo(peliculas.getTitulo());
+    		
+    		
+    		response.getPeliculas().add(pr);
+    		
+		}
+    	
+    	    	
+    	
+    	return response;
+    	
     }
 
 }

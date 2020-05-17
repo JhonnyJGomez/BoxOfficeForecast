@@ -8,10 +8,8 @@ import edu.com.cinemark.pojo.resp.ConsultarPeliculasPorSemanaResp;
 
 public interface IConsultaPeliculasPorSemana {
 
-	List<Forecast> getListForecatsPorNumSemana(String num_semana);
+	//List<Forecast> getListForecatsPorNumSemana(String num_semana);
 	
 	List<Peliculas> listarPeliculas(Integer id_fec_estreno);
-	
-	ConsultarPeliculasPorSemanaResp generateResponse(List<Peliculas> listPeliculas);
 	
 }

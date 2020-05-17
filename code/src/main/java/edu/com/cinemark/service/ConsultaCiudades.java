@@ -33,7 +33,7 @@ public class ConsultaCiudades implements IConsultaCiudades{
 		for (Ciudades ciudades : listCiudades) {
 			CiudadesResp cr= new CiudadesResp();
 			
-			cr.setCod_ciudad(ciudades.getCod_ciudad());
+			cr.setId_ciudad(String.valueOf(ciudades.getId()));
 			cr.setNom_ciudad(ciudades.getNom_ciudad());
 			
 			response.getCiudades().add(cr);
