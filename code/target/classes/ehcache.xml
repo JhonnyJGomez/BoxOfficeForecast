@@ -49,5 +49,27 @@
 		<persistence strategy="localTempSwap" />
 	</cache>
 	
+	<cache name="parametros"
+		memoryStoreEvictionPolicy="LFU" 
+		maxEntriesLocalHeap="500"
+		maxEntriesLocalDisk="500"
+		eternal="false" 
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="86400" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	
+	<cache name="peliculasparametros"
+		memoryStoreEvictionPolicy="LFU" 
+		maxEntriesLocalHeap="500"
+		maxEntriesLocalDisk="500"
+		eternal="false" 
+		timeToIdleSeconds="0"
+		timeToLiveSeconds="86400" 
+		transactionalMode="off">
+		<persistence strategy="localTempSwap" />
+	</cache>
+	
 </ehcache>
 

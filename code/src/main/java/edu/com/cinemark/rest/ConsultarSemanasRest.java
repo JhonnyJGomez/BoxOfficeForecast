@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +36,7 @@ public class ConsultarSemanasRest extends BaseConsultaSemanaController{
     @ApiResponses(value = { @ApiResponse(code = 400, message = "Bad Request", response = ApiFault.class),
 	    @ApiResponse(code = 500, message = "Internal Server Error", response = ApiFault.class),
 	    @ApiResponse(code = 204, message = "No Content", response = ApiFault.class) })
-    @PostMapping("/consulta-semana")
+    @GetMapping("/consulta-semana")
 	public ResponseEntity<ConsultarSemanasResp> getNumSemana(@Valid @RequestBody ConsultarSemanasReq request, BindingResult bindingResult,
 		    HttpServletRequest httpReq) throws MethodArgumentNotValidException {
 		
